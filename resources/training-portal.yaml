@@ -13,10 +13,10 @@ spec:
     updates:
       workshop: true
     sessions:
-      maximum: 10
+      maximum: 15
   workshops:
     - name: tap-overview
       expires: 120m
       orphaned: 20m
       capacity: 20
-      reserved: 2
+      reserved: 1

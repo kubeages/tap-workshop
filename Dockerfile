@@ -20,7 +20,7 @@ RUN curl -L -o /usr/local/bin/kn https://github.com/knative/client/releases/down
     chmod 755 /usr/local/bin/kn
 
 # Utilities
-RUN apt-get update && apt-get install -y unzip
+RUN apt-get clean && apt-get update && apt-get install -y unzip openjdk-17-jdk
 
 # Requirements for Live Update
 RUN curl -fsSL https://code-server.dev/install.sh | sh -s -- --version 4.11.0
@@ -59,6 +59,10 @@ RUN kubectl krew install ns
 RUN kubectl krew install eksporter
 RUN kubectl krew install slice
 RUN chmod 775 -R $HOME/.krew
+RUN apt update
+RUN apt install ruby-full -y
+
+# Cleanup directory
 RUN rm -rf /tmp/*
 
 USER 1001
