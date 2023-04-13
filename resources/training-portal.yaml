@@ -1,7 +1,7 @@
 apiVersion: learningcenter.tanzu.vmware.com/v1beta1
 kind: TrainingPortal
 metadata:
-  name: tap-demos
+  name: tap-workshop
   annotations:
     kapp.k14s.io/update-strategy: always-replace
 spec:
@@ -9,7 +9,7 @@ spec:
     title: Tanzu Application Platform Demos
     registration:
       type: one-step
-      enabled: false
+      enabled: true
     updates:
       workshop: true
     sessions:
@@ -20,8 +20,3 @@ spec:
       orphaned: 20m
       capacity: 20
       reserved: 2
-    - name: tap-development
-      expires: 60m
-      orphaned: 20m
-      capacity: 10
-      reserved: 0

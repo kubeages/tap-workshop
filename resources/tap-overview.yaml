@@ -10,9 +10,9 @@ spec:
   vendor: vmware.com
   difficulty: beginner
   duration: 30m
-  url: https://github.com/tanzu-end-to-end/tap-workshop
+  url: https://github.com/kubeages/tap-workshop
   content:
-    image: #@ "harbor.{}/tanzu-e2e/eduk8s-tap-workshop:latest".format(data.values.ingress.domain)
+    image: #@ "harbor.{}/tap-workshop/eduk8s-tap-workshop:latest".format(data.values.ingress.domain)
     files: #@ "github.com/{}/tap-workshop?ref={}".format(data.values.git.account,data.values.git.branch)
   session:
     resources:

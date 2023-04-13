@@ -2,9 +2,9 @@ apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
 kind: Accelerator
 metadata:
   name: spring-sensors
-  namespace: default
+  namespace: accelerator-system
 spec:
   git:
-    url: https://github.com/tanzu-end-to-end/spring-sensors
+    url: https://github.com/kubeages/spring-sensors
     ref:
       branch: main

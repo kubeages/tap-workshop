@@ -1,0 +1,22 @@
+#@data/values
+---
+ingress:
+  domain: tap.kubeagesaz.com
+  contour_tls_namespace: tanzu-system-ingress
+  contour_tls_secret: tap-wildcard-cert
+harbor:
+  user: admin
+  adminPassword: Harbor12345
+  diskSize: 50Gi
+gitea:
+  adminPassword: Gitea12345
+registry:
+  dockerhub: docker.io
+git:
+  account: kubeages
+  branch: main
+  #! Optionally, you can specify a Github token. This will be used by Harbor's Trivy scanner to avoid hitting rate limites
+  #!   gitHubToken: <token>
+tap:
+  view_cluster_domain: tap.kubeagesaz.com
+
